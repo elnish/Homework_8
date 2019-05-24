@@ -1,0 +1,12 @@
+@mixin elem {
+    width: 70px;
+    height: 70px;
+}
+
+@mixin round {
+    border-radius: 50%;
+}
+
+@mixin animateMove {
+    animation: move1 7s ease infinite;
+}
