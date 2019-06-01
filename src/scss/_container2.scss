@@ -1,0 +1,71 @@
+.container2 {
+    position: relative;
+    top: 200px;
+    left: -70px;
+    &__elem {
+        @include elem;
+        @include round;
+        &_first {
+            background-color: #0f60e2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include animateMove;
+        } 
+        &_second {
+            background-color: #bc0d36;
+            position: absolute;
+            top: 0;
+            left: 100px;
+            @include animateMove;
+            animation-name: move2;
+        } 
+        &_third {
+            background-color: #fcf419;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            @include animateMove;
+            animation-name: move3;
+        } 
+        &_fourth {
+            background-color: #dd8bdd;
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            @include animateMove;
+            animation-name: move4;
+        } 
+    }
+}
+
+//Keyframes for Task 2
+@keyframes move1 {
+    0% {transform: translate(0, 0); @include round;}
+    25% {transform: translate(100px, 0) scale(0.5); border-radius: 0%;}
+    50% {transform: translate(100px, 100px); @include round;}
+    75% {transform: translate(0, 100px) scale(0.5); border-radius: 0%;}
+  }
+
+@keyframes move2 {
+    0% {transform: translate(0, 0) scale(0.5); border-radius: 0%;}
+    25% {transform: translate(0, 100px); @include round;}
+    50% {transform: translate(-100px, 100px) scale(0.5); border-radius: 0%;}
+    75% {transform: translate(-100px, 0); @include round;}
+    100% {transform: translate(0, 0) scale(0.5); border-radius: 0%;}
+}
+
+@keyframes move3 {
+    0% {transform: translate(0, 0); @include round;}
+    25% {transform: translate(-100px, 0) scale(0.5); border-radius: 0%;}
+    50% {transform: translate(-100px, -100px); @include round;}
+    75% {transform: translate(0, -100px) scale(0.5); border-radius: 0%;}
+}
+
+@keyframes move4 {
+    0% {transform: translate(0, 0) scale(0.5); border-radius: 0%;}
+    25% {transform: translate(0, -100px); @include round;}
+    50% {transform: translate(100px, -100px) scale(0.5); border-radius: 0%;}
+    75% {transform: translate(100px, 0); @include round;}
+    100% {transform: translate(0, 0) scale(0.5); border-radius: 0%;}
+}
